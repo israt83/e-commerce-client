@@ -22,6 +22,7 @@ import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../Components/AdminHome/AdminHome";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
+import SearchResultsPage from "../Pages/Shared/NavBar/SearchResultsPage";
 
 
 
@@ -39,11 +40,16 @@ import ProductDetails from "../Components/ProductDetails/ProductDetails";
           path:'/product',
           element:<Product></Product>
         },
+      
          {
         path: "/product/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
           fetch(`http://localhost:5001/product/${params.id}`), 
+      },
+      {
+        path:'/search',
+        element:<SearchResultsPage/>
       },
         {
           path:'/order/:category',
