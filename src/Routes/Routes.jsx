@@ -23,6 +23,7 @@ import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../Components/AdminHome/AdminHome";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import SearchResultsPage from "../Pages/Shared/NavBar/SearchResultsPage";
+import ManageBooking from "../Pages/Dashboard/ManageBooking/ManageBooking";
 
 
 
@@ -106,6 +107,10 @@ import SearchResultsPage from "../Pages/Shared/NavBar/SearchResultsPage";
         {
           path:'manageItems',
           element:<AdminRoute><ManageItems></ManageItems></AdminRoute>
+        },
+        {
+          path:'manageBookings',
+          element:<AdminRoute><ManageBooking/></AdminRoute>
         },
         {
           path:'updateItem/:id',

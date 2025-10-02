@@ -7,14 +7,7 @@ const ProductItem = ({ item }) => {
     description.length > 60 ? description.slice(0, 60) + "..." : description;
   // console.log(item);
   return (
-    // <div className="flex space-x-4 ">
-    //     <img  className="w-[100px] h-[100px]" src={image} alt="" />
-    //     <div>
-    //         <h3 className="uppercase">{name}-------</h3>
-    //         <p className="text-sm text-[#737373]">{description}</p>
-    //     </div>
-    //     <p className="text-yellow-600">${price}</p>
-    // </div>
+   
     <div className="relative bg-white shadow-lg w-4/5 rounded-lg overflow-hidden group">
       <div className="relative">
         <img

@@ -187,6 +187,7 @@ const AdminHome = () => {
     queryKey: ["admin-stats"],
     queryFn: async () => {
       const res = await axiosSecure.get("/admin-stats");
+      console.log("stats in client" , res.data)
       return res.data;
     },
   });
@@ -262,7 +263,7 @@ const AdminHome = () => {
         Hi, Welcome {user?.displayName || "Back"}
       </h2>
 
-      <div className="stats shadow my-4">
+      <div className="stats shadow my-4 mx-10">
         <div className="stat">
           <div className="stat-figure text-secondary">
             <FaDollarSign />
