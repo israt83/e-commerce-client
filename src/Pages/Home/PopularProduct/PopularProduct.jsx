@@ -2,6 +2,7 @@
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import ProductItem from "../../Shared/Footer/ProductItem/ProductItem";
 import useProduct from "../../../hooks/useProduct";
+import { Link } from "react-router-dom";
 
 const PopularProduct = () => {
 
@@ -27,7 +28,7 @@ const unisexProducts = product.filter((item) => item.gender === "Unisex");
           <ProductItem key={item.id} item={item} />
         ))}
       </div>
-      <button className="btn btn-outline bottom-0 border-b-4 mt-4"><span className="uppercas">View Full Product</span></button>
+     <Link to="/product"> <button className="btn btn-outline bottom-0 border-b-4 mt-4"><span className="uppercas">View Full Product</span></button></Link>
     </section>
   );
 };

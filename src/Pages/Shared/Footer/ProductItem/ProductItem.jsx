@@ -17,7 +17,7 @@ const ProductItem = ({ item }) => {
       : price;
 
   return (
-    <div className="relative bg-white shadow-lg w-4/5 rounded-lg overflow-hidden group">
+    <div className="relative bg-white shadow-lg md:first-letter md:w-4/5 rounded-lg overflow-hidden group">
       <div className="relative">
         <img
           className="w-full h-[200px] object-cover transition duration-300 group-hover:blur-sm"

@@ -1,6 +1,6 @@
 
 import { useContext, useState, useEffect } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
@@ -105,7 +105,7 @@ const NavBar = () => {
           </NavLink>
         </li>
       )}
-      <li>
+      <li className="hidden lg:block">
         <NavLink
           to="/dashboard/cart"
           className={({ isActive }) =>
@@ -122,7 +122,7 @@ const NavBar = () => {
       </li>
 
       {user ? (
-        <li className="flex items-center relative">
+        <li className="hidden md:flex items-center relative ">
           <div
             className="avatar"
             onMouseEnter={handleMouseEnter}
@@ -190,15 +190,76 @@ const NavBar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 text-black p-2 shadow"
           >
             {navLink}
           </ul>
         </div>
-        <a className="text-3xl font-bold">
+       <div className="flex items-center justify-center space-x-5">
+         <Link to="/" className="text-3xl font-bold">
           <span className="text-[#D99904] text-4xl">Luxe</span>
           <span>Beauty</span>
-        </a>
+        </Link>
+        <li className="list-none lg:hidden mt-3">
+        <NavLink
+          to="/dashboard/cart"
+          className={({ isActive }) =>
+            isActive
+              ? "text-[#D99904] w-fit text-base font-medium"
+              : "text-base w-fit font-medium hover:text-[#D99904] duration-300"
+          }
+        >
+          <div className="flex mt-2">
+            <FaShoppingCart className="text-lg" />
+            <sup className="text-lg">+0{cart.length}</sup>
+          </div>
+        </NavLink>
+      </li>
+        {user ? (
+        <li className="flex md:hidden items-center relative">
+          <div
+            className="avatar"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="w-10 rounded-full ring-1 ring-[#4b5664] ring-offset-base-100 ring-offset-2">
+              <img src={user?.photoURL || ""} alt="User Avatar" />
+            </div>
+          </div>
+
+          {isModalVisible && (
+            <div
+              data-aos="fade-down"
+              className="absolute top-12 right-0 bg-black text-white rounded-md shadow-lg p-4"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="flex flex-col">
+                <p className="font-medium">{user.displayName}</p>
+                <button
+                  onClick={handleLogOut}
+                  className="btn btn-ghost text-white"
+                >
+                  <div className="flex gap-1">
+                    <MdLogout />
+                    <span>Logout</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          )}
+        </li>
+      ) : (
+        <li>
+          <NavLink
+            to="/login"
+            className="text-base font-medium hover:text-[#D99904] duration-300"
+          >
+            Login
+          </NavLink>
+        </li>
+      )}
+       </div>
       </div>
 
       {/*  Search Bar Center */}

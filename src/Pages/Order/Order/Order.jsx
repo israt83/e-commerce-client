@@ -35,7 +35,7 @@ const Order = () => {
       ></Cover>
       <div className="mt-10">
         <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-          <TabList className="text-center mb-10 text-lg font-semibold flex justify-center gap-8 ">
+          <TabList className="text-center mb-10 text-sm md:text-lg font-semibold flex justify-center gap-1 md:gap-8 ">
             <Tab
               className="px-4 py-2 cursor-pointer focus:outline-none border-b-2 "
               selectedClassName="text-yellow-600 border-b-2 border-yellow-600"
