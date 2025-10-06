@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "./../../../assets/logo2.jpeg";
+
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPaperPlane, FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -31,14 +31,14 @@ export default function Footer() {
                 className="flex justify-center lg:justify-start"
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-full ">
-                  <img
+                  {/* <img
                     data-aos="zoom-in-up"
                     data-aos-delay="500 "
                     data-aos-duration="1000"
                     src={logo}
                     alt=""
                     className=""
-                  />
+                  /> */}
                 </div>
 
                 <span

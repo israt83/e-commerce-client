@@ -122,7 +122,7 @@ const NavBar = () => {
       </li>
 
       {user ? (
-        <li className="hidden md:flex items-center relative ">
+        <p className="hidden md:flex items-center relative ">
           <div
             className="avatar"
             onMouseEnter={handleMouseEnter}
@@ -154,7 +154,7 @@ const NavBar = () => {
               </div>
             </div>
           )}
-        </li>
+        </p>
       ) : (
         <li>
           <NavLink
@@ -215,8 +215,9 @@ const NavBar = () => {
           </div>
         </NavLink>
       </li>
-        {user ? (
-        <li className="flex md:hidden items-center relative">
+      <div className="lg:hidden">
+          {user ? (
+        <p className="flex md:hidden items-center relative">
           <div
             className="avatar"
             onMouseEnter={handleMouseEnter}
@@ -248,17 +249,18 @@ const NavBar = () => {
               </div>
             </div>
           )}
-        </li>
+        </p>
       ) : (
-        <li>
+        <p>
           <NavLink
             to="/login"
             className="text-base font-medium hover:text-[#D99904] duration-300"
           >
             Login
           </NavLink>
-        </li>
+        </p>
       )}
+      </div>
        </div>
       </div>
 
