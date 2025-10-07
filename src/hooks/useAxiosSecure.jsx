@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
-    baseURL: 'https://e-commerce-server-five-chi.vercel.app'
+    baseURL: 'http://localhost:5001'
 });
 
 const useAxiosSecure = () => {
@@ -15,7 +15,7 @@ const useAxiosSecure = () => {
 
     axiosSecure.interceptors.request.use(
         (config) => {
-             console.log("Axios request:", config.url, config.headers);
+            //  console.log("Axios request:", config.url, config.headers);
             const token = localStorage.getItem('access-token');
             config.headers.Authorization = `Bearer ${token}`;
             return config;

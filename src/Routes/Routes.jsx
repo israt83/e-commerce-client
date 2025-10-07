@@ -46,7 +46,7 @@ import ManageBooking from "../Pages/Dashboard/ManageBooking/ManageBooking";
         path: "/product/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`https://e-commerce-server-five-chi.vercel.app/product/${params.id}`), 
+          fetch(`http://localhost:5001/product/${params.id}`), 
       },
       {
         path:'/search',
@@ -115,7 +115,7 @@ import ManageBooking from "../Pages/Dashboard/ManageBooking/ManageBooking";
         {
           path:'updateItem/:id',
           element:<AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-          loader:({params}) =>fetch(`https://e-commerce-server-five-chi.vercel.app/product/${params.id}`)
+          loader:({params}) =>fetch(`http://localhost:5001/product/${params.id}`)
           
         }
       ]
