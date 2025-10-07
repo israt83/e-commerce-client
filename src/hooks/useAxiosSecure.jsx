@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
-    baseURL: 'https://e-commerce-server-five-chi.vercel.app'
+    baseURL: 'https://e-commerce-server-gray-kappa.vercel.app'
 });
 
 const useAxiosSecure = () => {

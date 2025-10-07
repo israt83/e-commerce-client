@@ -7,7 +7,7 @@ const useProduct = () => {
   // const [product, setProduct] = useState([]);
   // const [loading, setLoading] = useState(true);
   // useEffect(() => {
-  //   fetch("https://e-commerce-server-five-chi.vercel.app/product")
+  //   fetch("https://e-commerce-server-gray-kappa.vercel.app/product")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setProduct(data);

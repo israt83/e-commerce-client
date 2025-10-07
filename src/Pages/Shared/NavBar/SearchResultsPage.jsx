@@ -17,7 +17,7 @@ const SearchResultsPage = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `https://e-commerce-server-five-chi.vercel.app/products?query=${query}`
+          `https://e-commerce-server-gray-kappa.vercel.app/products?query=${query}`
         );
         const data = await res.json();
         setProducts(data);
