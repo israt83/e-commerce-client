@@ -195,7 +195,7 @@ const NavBar = () => {
             {navLink}
           </ul>
         </div>
-       <div className="flex items-center justify-center space-x-5">
+       <div className="flex items-center justify-center gap-4">
          <Link to="/" className="text-3xl font-bold">
           <span className="text-[#D99904] text-4xl">Luxe</span>
           <span>Beauty</span>
